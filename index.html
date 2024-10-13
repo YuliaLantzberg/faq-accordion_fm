@@ -12,16 +12,23 @@
 			href="./images/favicon-32x32.png"
 		/>
 
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
+
 		<title>Frontend Mentor | FAQ Accordion Card</title>
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<main>
-			<div class="hero">
+		<main class="container grid-center">
+			<div class="container__hero grid-center">
 				<img src="images/illustration-woman-online-mobile.svg" alt="" />
 				<img src="images/bg-pattern-mobile.svg" alt="" />
 			</div>
-			<div class="content">
+			<div class="container__content">
 				<h1 class="content__title">faq</h1>
 				<div class="card">
 					<h2 class="card__question">How many team members can I invite?</h2>
@@ -30,6 +37,7 @@
 						no limit on team members for the Premium plan.
 					</p>
 				</div>
+				<hr class="card__divider" />
 				<div class="card">
 					<h2 class="card__question">What is the maximum file upload size?</h2>
 					<p class="card__answer">
@@ -37,6 +45,7 @@
 						storage space.
 					</p>
 				</div>
+				<hr class="card__divider" />
 				<div class="card">
 					<h2 class="card__question">How do I reset my password?</h2>
 					<p class="card__answer">
@@ -44,6 +53,7 @@
 						from your profile page. A reset link will be emailed to you.
 					</p>
 				</div>
+				<hr class="card__divider" />
 				<div class="card">
 					<h2 class="card__question">Can I cancel my subscription?</h2>
 					<p class="card__answer">
@@ -51,6 +61,7 @@
 						asked.
 					</p>
 				</div>
+				<hr class="card__divider" />
 				<div class="card">
 					<h2 class="card__question">Do you provide additional support?</h2>
 					<p class="card__answer">
@@ -58,6 +69,7 @@
 						during normal business hours.
 					</p>
 				</div>
+				<hr class="card__divider" />
 			</div>
 		</main>
 
