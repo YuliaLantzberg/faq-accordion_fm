@@ -145,6 +145,30 @@ body {
 /* --- Card Styling --- */
 
 .card__question {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	cursor: pointer;
+}
+
+.card__question h2 {
 	font-size: var(--fs-regular);
 	font-weight: var(--fw-bold);
+	transition: all 0.5s;
+}
+
+.card__question img {
+	transition: all 1s;
+}
+
+.card__answer {
+	opacity: 0;
+	height: 0;
+	transition: all 0.5s;
+}
+
+.card__divider {
+	color: var(--clr-ntrl-grayish-blue-100);
+	margin: 1rem 0;
 }
