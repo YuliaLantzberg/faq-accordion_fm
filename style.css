@@ -91,8 +91,12 @@ body {
 	font-size: var(--fs-regular);
 	font-weight: var(--fw-regular);
 	color: var(--clr-ntrl-grayish-blue-500);
-
+	background-image: linear-gradient(
+		var(--clr-prmry-violet-300),
+		var(--clr-prmry-blue-300)
+	);
 	height: 100vh;
+	margin: 2rem;
 }
 
 .grid-center {
@@ -103,17 +107,17 @@ body {
 .container {
 	padding: 3rem 2rem;
 	position: relative;
-	background-image: linear-gradient(
-		var(--clr-prmry-violet-300),
-		var(--clr-prmry-blue-300)
-	);
+	background-color: #fff;
+
+	padding-top: 7.25rem;
+	border-radius: 1rem;
 }
 
 /* --- Hero Styling ---*/
 
 .container__hero {
 	position: absolute;
-	top: 3rem;
+	top: -5rem;
 	left: 40%;
 	transform: translateX(-40%);
 }
@@ -127,11 +131,6 @@ body {
 /* --- Content Styling --- */
 
 .container__content {
-	background-color: #fff;
-	padding: 2rem;
-	padding-top: 7.25rem;
-	margin-top: 30%;
-	border-radius: 1rem;
 }
 
 .content__title {
@@ -144,18 +143,25 @@ body {
 
 /* --- Card Styling --- */
 
+.card {
+	cursor: pointer;
+}
+
 .card__question {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	gap: 1rem;
-	cursor: pointer;
 }
 
 .card__question h2 {
 	font-size: var(--fs-regular);
 	font-weight: var(--fw-bold);
 	transition: all 0.5s;
+}
+
+.card__question:hover h2 {
+	color: var(--clr-prmry-red-300);
 }
 
 .card__question img {
@@ -165,10 +171,50 @@ body {
 .card__answer {
 	opacity: 0;
 	height: 0;
-	transition: all 0.5s;
+	transition: opacity 0.5s, height 1s;
 }
 
 .card__divider {
-	color: var(--clr-ntrl-grayish-blue-100);
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid var(--clr-ntrl-grayish-blue-100);
 	margin: 1rem 0;
+}
+
+@media all and (min-width: 30.313rem) {
+	.container__hero img:last-child {
+		left: 1.5rem;
+	}
+}
+
+@media all and (min-width: 37.5rem) {
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 3rem;
+		padding-top: 3rem;
+		max-width: 33.75rem;
+	}
+
+	.container__hero {
+		position: relative;
+		top: 0;
+		left: -1rem;
+	}
+
+	.container__content {
+		width: 60%;
+		margin-left: -3rem;
+	}
+
+	.content__title {
+		text-align: left;
+		margin-bottom: 1rem;
+	}
+
+	.card__divider {
+		margin: 0.5rem 0;
+	}
 }
