@@ -158,10 +158,7 @@ body {
 	font-size: var(--fs-regular);
 	font-weight: var(--fw-bold);
 	transition: all 0.5s;
-}
-
-.card__question:hover h2 {
-	color: var(--clr-prmry-red-300);
+	z-index: 1000;
 }
 
 .card__question img {
@@ -180,6 +177,10 @@ body {
 	border: 0;
 	border-top: 1px solid var(--clr-ntrl-grayish-blue-100);
 	margin: 1rem 0;
+}
+
+.card__question:hover h2 {
+	color: var(--clr-prmry-red-300);
 }
 
 @media all and (min-width: 30.313rem) {
